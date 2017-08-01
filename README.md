@@ -1,2 +1,1 @@
-# ambition-labs
-Ambition Labs
+# ambition-lab
