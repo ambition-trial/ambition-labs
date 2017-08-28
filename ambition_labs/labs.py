@@ -34,10 +34,10 @@ csf_testing = AliquotType(
     name='Isolates', alpha_code='ISOLATES', numeric_code='64')
 
 csf_glucose = AliquotType(
-    name='Glucose', alpha_code='Glucose', numeric_code='65')
+    name='Glucose', alpha_code='GLUCOSE', numeric_code='65')
 
 csf_protein = AliquotType(
-    name='Protein', alpha_code='Protein', numeric_code='66')
+    name='Protein', alpha_code='PROTEIN', numeric_code='66')
 
 # TODO: Get correct sample codes from LIS
 csf = AliquotType(
@@ -123,13 +123,13 @@ serum_panel = RequisitionPanel(
     name='Serum',
     aliquot_type=wb,
     processing_profile=serum_processing)
-lab_profile.add_panel()
+lab_profile.add_panel(serum_panel)
 
 plasma_panel = RequisitionPanel(
     name='Plasma',
     aliquot_type=wb,
     processing_profile=plasma_processing)
-lab_profile.add_panel()
+lab_profile.add_panel(plasma_panel)
 
 site_labs.register(
     lab_profile, requisition_model='ambition_subject.subjectrequisition')
