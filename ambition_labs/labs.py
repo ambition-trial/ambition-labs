@@ -78,7 +78,7 @@ chemistry_alt_processing = ProcessingProfile(
     name='chem + alt', aliquot_type=wb)
 
 csf_panel = RequisitionPanel(
-    name='Spinal Fluid Storage & Testing',
+    name='Spinal Fluid Test & Store',
     aliquot_type=csf,
     processing_profile=csf_store_processing_profile)
 lab_profile.add_panel(csf_panel)
