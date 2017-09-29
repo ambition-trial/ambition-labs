@@ -46,7 +46,7 @@ csf.add_derivatives(qfc, csf_store, csf_testing, csf_glucose, csf_protein)
 
 csf_store_processing_profile = ProcessingProfile(
     name='csf_culture', aliquot_type=csf)
-process_qfc = Process(aliquot_type=qfc, aliquot_count=4)
+process_qfc = Process(aliquot_type=qfc, aliquot_count=1)
 process_csf_testing = Process(aliquot_type=csf_testing, aliquot_count=3)
 csf_store_processing_profile.add_processes(process_qfc, process_csf_testing)
 
@@ -57,9 +57,14 @@ process_csf_protein = Process(aliquot_type=csf_protein, aliquot_count=1)
 csf_chem_processing_profile.add_processes(
     process_csf_glucose, process_csf_protein)
 
+whole_blood_processing = ProcessingProfile(
+    name='whole_blood_store', aliquot_type=wb)
+process_wb = Process(aliquot_type=wb, aliquot_count=2)
+whole_blood_processing.add_processes(process_wb)
+
 viral_load_processing = ProcessingProfile(name='viral_load', aliquot_type=wb)
-vl_pl_process = Process(aliquot_type=pl, aliquot_count=3)
-vl_bc_process = Process(aliquot_type=bc, aliquot_count=1)
+vl_pl_process = Process(aliquot_type=pl, aliquot_count=4)
+vl_bc_process = Process(aliquot_type=bc, aliquot_count=2)
 viral_load_processing.add_processes(vl_pl_process, vl_bc_process)
 
 cd4_processing = ProcessingProfile(name='CD4', aliquot_type=wb)
@@ -77,14 +82,20 @@ plasma_process = Process(aliquot_type=pl, aliquot_count=2)
 chemistry_alt_processing = ProcessingProfile(
     name='chem + alt', aliquot_type=wb)
 
+wb_panel = RequisitionPanel(
+    name='Whole Blood Storage',
+    aliquot_type=wb,
+    processing_profile=whole_blood_processing)
+lab_profile.add_panel(wb_panel)
+
 csf_panel = RequisitionPanel(
-    name='Spinal Fluid Test & Store',
+    name='CSF Test & Store',
     aliquot_type=csf,
     processing_profile=csf_store_processing_profile)
 lab_profile.add_panel(csf_panel)
 
 csf_chemistry_panel = RequisitionPanel(
-    name='Spinal Fluid Chemistry',
+    name='CSF Chemistry',
     aliquot_type=csf,
     processing_profile=csf_chem_processing_profile)
 lab_profile.add_panel(csf_chemistry_panel)
@@ -120,13 +131,13 @@ chemistry_alt_panel = RequisitionPanel(
 lab_profile.add_panel(chemistry_alt_panel)
 
 serum_panel = RequisitionPanel(
-    name='Serum',
+    name='Serum Storage',
     aliquot_type=wb,
     processing_profile=serum_processing)
 lab_profile.add_panel(serum_panel)
 
 plasma_panel = RequisitionPanel(
-    name='Plasma',
+    name='Plasma Storage',
     aliquot_type=wb,
     processing_profile=plasma_processing)
 lab_profile.add_panel(plasma_panel)
