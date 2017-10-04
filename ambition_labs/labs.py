@@ -58,9 +58,7 @@ csf_chem_processing_profile.add_processes(
     process_csf_glucose, process_csf_protein)
 
 whole_blood_processing = ProcessingProfile(
-    name='whole_blood_store', aliquot_type=wb)
-process_wb = Process(aliquot_type=wb, aliquot_count=2)
-whole_blood_processing.add_processes(process_wb)
+    name='whole_blood_store', aliquot_type=wb, aliquot_count=2)
 
 viral_load_processing = ProcessingProfile(name='viral_load', aliquot_type=wb)
 vl_pl_process = Process(aliquot_type=pl, aliquot_count=4)
