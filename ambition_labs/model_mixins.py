@@ -14,6 +14,8 @@ from edc_visit_tracking.model_mixins import PreviousVisitModelMixin
 class Manager(VisitTrackingCrfModelManager, SearchSlugManager):
     pass
 
+# TODO Is any of this used??
+
 
 class SubjectRequisitionModelMixin(
         RequisitionModelMixin, RequisitionStatusMixin, RequisitionIdentifierMixin,

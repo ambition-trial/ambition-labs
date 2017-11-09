@@ -10,8 +10,8 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='ambition-lab',
-    version='0.1.0dev',
+    name='ambition-labs',
+    version='0.1.0',
     author=u'Leslie Kepaletswe',
     author_email='leslie.kep@gmail.com',
     packages=find_packages(),
@@ -28,7 +28,7 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
