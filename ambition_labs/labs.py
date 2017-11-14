@@ -55,11 +55,13 @@ csf_store_processing_profile.add_processes(process_qfc, process_csf_testing)
 
 csf_pkpd_processing_profile = ProcessingProfile(
     name='csf_pkpd', aliquot_type=csf)
+process_csf_pkpd = Process(aliquot_type=csf, aliquot_count=2)
+csf_pkpd_processing_profile.add_processes(process_csf_pkpd)
+
+qpcr_csf_processing_profile = Process(name='qpcr_csf', aliquot_type=csf)
 process_supernatant = Process(aliquot_type=csf_supernatant, aliquot_count=1)
 process_pellet = Process(aliquot_type=csf_pellet, aliquot_count=1)
-process_csf_pkpd = Process(aliquot_type=csf, aliquot_count=2)
-csf_pkpd_processing_profile.add_processes(
-    process_supernatant, process_pellet, process_csf_pkpd)
+qpcr_csf_processing_profile.add_processes(process_supernatant, process_pellet)
 
 csf_chem_processing_profile = ProcessingProfile(
     name='csf_chemistry', aliquot_type=csf)
@@ -98,10 +100,10 @@ plasma_processing = ProcessingProfile(name='Plasma', aliquot_type=wb)
 plasma_process = Process(aliquot_type=pl, aliquot_count=4)
 plasma_processing.add_processes(plasma_process)
 
-qpcr_processing = ProcessingProfile(name='qPCR', aliquot_type=wb)
+qpcr_blood_processing = ProcessingProfile(name='qPCR', aliquot_type=wb)
 qpcr_wb_process = Process(aliquot_type=wb, aliquot_count=1)
 qpcr_pl_process = Process(aliquot_type=pl, aliquot_count=2)
-qpcr_processing.add_processes(qpcr_pl_process)
+qpcr_blood_processing.add_processes(qpcr_wb_process, qpcr_pl_process)
 
 chemistry_alt_processing = ProcessingProfile(
     name='chem + alt', aliquot_type=wb)
@@ -117,6 +119,12 @@ csf_pkpd_panel = RequisitionPanel(
     aliquot_type=csf,
     processing_profile=csf_pkpd_processing_profile)
 lab_profile.add_panel(csf_pkpd_panel)
+
+qpcr_csf_panel = RequisitionPanel(
+    name='qPCR CSF',
+    aliquot_type=csf,
+    processing_profile=csf_pkpd_processing_profile)
+lab_profile.add_panel(qpcr_csf_panel)
 
 csf_panel = RequisitionPanel(
     name='CSF Test & Store',
@@ -172,11 +180,11 @@ plasma_buffycoat_panel = RequisitionPanel(
     processing_profile=plasma_buffycoat_processing)
 lab_profile.add_panel(plasma_buffycoat_panel)
 
-qpcr_panel = RequisitionPanel(
-    name='qPCR',
+qpcr_blood_panel = RequisitionPanel(
+    name='qPCR Blood',
     aliquot_type=wb,
-    processing_profile=qpcr_processing)
-lab_profile.add_panel(qpcr_panel)
+    processing_profile=qpcr_blood_processing)
+lab_profile.add_panel(qpcr_blood_panel)
 
 pk_plasma_panel_t2 = RequisitionPanel(
     name='Pk Plasma Store T2',
