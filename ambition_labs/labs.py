@@ -3,8 +3,7 @@ from edc_lab.site_labs import site_labs
 from edc_lab.lab.processing_profile import Process
 
 
-lab_profile = LabProfile(
-    name='ambition_subject')
+lab_profile = LabProfile(name='ambition_subject')
 
 pl = AliquotType(name='Plasma', alpha_code='PL', numeric_code='36')
 
@@ -64,7 +63,8 @@ csf_pkpd_processing_profile = ProcessingProfile(
 process_csf_pkpd = Process(aliquot_type=csf, aliquot_count=2)
 csf_pkpd_processing_profile.add_processes(process_csf_pkpd)
 
-qpcr_csf_processing_profile = Process(name='qpcr_csf', aliquot_type=csf)
+qpcr_csf_processing_profile = ProcessingProfile(
+    name='qpcr_csf', aliquot_type=csf)
 process_supernatant = Process(aliquot_type=csf_supernatant, aliquot_count=1)
 process_pellet = Process(aliquot_type=csf_pellet, aliquot_count=1)
 qpcr_csf_processing_profile.add_processes(process_supernatant, process_pellet)
