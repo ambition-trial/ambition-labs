@@ -49,9 +49,15 @@ csf.add_derivatives(
 
 csf_store_processing_profile = ProcessingProfile(
     name='csf_culture', aliquot_type=csf)
-process_qfc = Process(aliquot_type=qfc, aliquot_count=2)
-process_csf_testing = Process(aliquot_type=csf_testing, aliquot_count=3)
+process_qfc = Process(aliquot_type=qfc, aliquot_count=3)
+process_csf_testing = Process(aliquot_type=csf_testing, aliquot_count=2)
 csf_store_processing_profile.add_processes(process_qfc, process_csf_testing)
+
+csf_stop_processing_profile = ProcessingProfile(
+    name='csf_store', aliquot_type=csf)
+csf_store = Process(aliquot_type=qfc, aliquot_count=2)
+process_csf_testing = Process(aliquot_type=csf_testing, aliquot_count=1)
+csf_stop_processing_profile.add_processes(csf_store, process_csf_testing)
 
 csf_pkpd_processing_profile = ProcessingProfile(
     name='csf_pkpd', aliquot_type=csf)
@@ -123,7 +129,7 @@ lab_profile.add_panel(csf_pkpd_panel)
 qpcr_csf_panel = RequisitionPanel(
     name='qPCR CSF',
     aliquot_type=csf,
-    processing_profile=csf_pkpd_processing_profile)
+    processing_profile=qpcr_csf_processing_profile)
 lab_profile.add_panel(qpcr_csf_panel)
 
 csf_panel = RequisitionPanel(
@@ -131,6 +137,12 @@ csf_panel = RequisitionPanel(
     aliquot_type=csf,
     processing_profile=csf_store_processing_profile)
 lab_profile.add_panel(csf_panel)
+
+csf_stop_panel = RequisitionPanel(
+    name='CSF Stop CM',
+    aliquot_type=csf,
+    processing_profile=csf_stop_processing_profile)
+lab_profile.add_panel(csf_stop_panel)
 
 csf_chemistry_panel = RequisitionPanel(
     name='CSF Chemistry',
