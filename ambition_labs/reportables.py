@@ -12,10 +12,6 @@ age_opts = dict(
     age_lower_inclusive=True,
     age_upper_inclusive=True)
 
-opts = dict(
-    lower_inclusive=True,
-    upper_inclusive=True)
-
 normal_data = {
     'haemoglobin': [
         p('13.5<=x<=17.5', units=GRAMS_PER_DECILITER,
