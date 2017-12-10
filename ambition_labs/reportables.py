@@ -23,7 +23,7 @@ normal_data = {
         p('12.0<=x<=15.5', units=GRAMS_PER_DECILITER, gender=[FEMALE], **age_opts)],
     'platelets': [
         p('150<=x<=450', units=TEN_X_9_PER_LITER, gender=[MALE, FEMALE], **age_opts)],
-    'neutrophils': [
+    'neutrophil': [
         p('2.5<=x<=7.5', units=TEN_X_9_PER_LITER, gender=[MALE, FEMALE], **age_opts)],
     'sodium': [
         p('135<=x<=145', units=MILLIMOLES_PER_LITER, gender=[MALE, FEMALE], **age_opts)],
@@ -56,10 +56,10 @@ grading_data = {
         p('x<25', grade=GRADE4, units=TEN_X_9_PER_LITER,
           gender=[MALE, FEMALE], **age_opts),
     ],
-    'neutrophils': [
+    'neutrophil': [
         p('0.4<=x<=0.59', grade=GRADE3, units=TEN_X_9_PER_LITER,
           gender=[MALE, FEMALE], **age_opts),
-        p('x<0.4', grade=GRADE3, units=TEN_X_9_PER_LITER,
+        p('x<0.4', grade=GRADE4, units=TEN_X_9_PER_LITER,
           gender=[MALE, FEMALE], **age_opts),
     ],
     'sodium': [
@@ -85,7 +85,7 @@ grading_data = {
     'magnesium': [
         p('0.3<=x<=0.44', grade=GRADE3, units=MILLIMOLES_PER_LITER,
           gender=[MALE, FEMALE], **age_opts),
-        p('0.3<x', grade=GRADE4, units=MILLIMOLES_PER_LITER,
+        p('x<0.3', grade=GRADE4, units=MILLIMOLES_PER_LITER,
           gender=[MALE, FEMALE], **age_opts),
     ],
     'alt': [
