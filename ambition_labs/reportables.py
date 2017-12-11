@@ -1,7 +1,7 @@
 from edc_constants.constants import FEMALE, MALE
 
 from edc_reportable import site_reportables, parse as p
-from edc_reportable import MILLIGRAMS_PER_DECILITER, MILLIMOLES_PER_LITER, MICROMOLES_PER_LITER, UI_LITER
+from edc_reportable import MILLIGRAMS_PER_DECILITER, MILLIMOLES_PER_LITER, MICROMOLES_PER_LITER, IU_LITER
 from edc_reportable import GRAMS_PER_DECILITER, TEN_X_9_PER_LITER, GRADE3, GRADE4
 
 
@@ -28,7 +28,7 @@ normal_data = {
     'magnesium': [
         p('0.75<=x<=1.2', units=MILLIMOLES_PER_LITER, gender=[MALE, FEMALE], **age_opts)],
     'alt': [
-        p('10<=x<=40', units=UI_LITER, gender=[MALE, FEMALE], **age_opts)],
+        p('10<=x<=40', units=IU_LITER, gender=[MALE, FEMALE], **age_opts)],
     'creatinine': [
         p('0.6<=x<=1.3', units=MILLIGRAMS_PER_DECILITER,
           gender=[MALE, FEMALE], **age_opts),
@@ -85,9 +85,9 @@ grading_data = {
           gender=[MALE, FEMALE], **age_opts),
     ],
     'alt': [
-        p('200<=x<=400', grade=GRADE3, units=UI_LITER,
+        p('200<=x<=400', grade=GRADE3, units=IU_LITER,
           gender=[MALE, FEMALE], **age_opts),
-        p('400<x', grade=GRADE4, units=UI_LITER,
+        p('400<x', grade=GRADE4, units=IU_LITER,
           gender=[MALE, FEMALE], **age_opts),
     ],
     'creatinine': [
