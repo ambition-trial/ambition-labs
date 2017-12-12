@@ -24,7 +24,7 @@ qfc = AliquotType(
     name='Quantitative FC', alpha_code='QFC', numeric_code='61')
 
 csf_store = AliquotType(
-    name='CSF STORE', alpha_code='CSF', numeric_code='62')
+    name='CSF store', alpha_code='CSF', numeric_code='62')
 
 csf_testing = AliquotType(
     name='Isolates', alpha_code='ISOLATES', numeric_code='64')
@@ -112,7 +112,7 @@ qpcr_pl_process = Process(aliquot_type=pl, aliquot_count=2)
 qpcr_blood_processing.add_processes(qpcr_wb_process, qpcr_pl_process)
 
 chemistry_alt_processing = ProcessingProfile(
-    name='chem + alt', aliquot_type=wb)
+    name='Chem + ALT', aliquot_type=wb)
 
 wb_panel = RequisitionPanel(
     name='Whole Blood Storage',
@@ -121,7 +121,7 @@ wb_panel = RequisitionPanel(
 lab_profile.add_panel(wb_panel)
 
 csf_pkpd_panel = RequisitionPanel(
-    name='CSF PkPd',
+    name='CSF PK/PD',
     aliquot_type=csf,
     processing_profile=csf_pkpd_processing_profile)
 lab_profile.add_panel(csf_pkpd_panel)
@@ -139,7 +139,7 @@ csf_panel = RequisitionPanel(
 lab_profile.add_panel(csf_panel)
 
 csf_stop_panel = RequisitionPanel(
-    name='CSF Stop CM',
+    name='CSF STOP-CM',
     aliquot_type=csf,
     processing_profile=csf_stop_processing_profile)
 lab_profile.add_panel(csf_stop_panel)
@@ -199,31 +199,31 @@ qpcr_blood_panel = RequisitionPanel(
 lab_profile.add_panel(qpcr_blood_panel)
 
 pk_plasma_panel_t2 = RequisitionPanel(
-    name='Pk Plasma Store T2',
+    name='PK Plasma Store T2',
     aliquot_type=wb,
     processing_profile=plasma_processing)
 lab_profile.add_panel(pk_plasma_panel_t2)
 
 pk_plasma_panel_t4 = RequisitionPanel(
-    name='Pk Plasma Store T4',
+    name='PK Plasma Store T4',
     aliquot_type=wb,
     processing_profile=plasma_processing)
 lab_profile.add_panel(pk_plasma_panel_t4)
 
 pk_plasma_panel_t7 = RequisitionPanel(
-    name='Pk Plasma Store T7',
+    name='PK Plasma Store T7',
     aliquot_type=wb,
     processing_profile=plasma_processing)
 lab_profile.add_panel(pk_plasma_panel_t7)
 
 pk_plasma_panel_t12 = RequisitionPanel(
-    name='Pk Plasma Store T12',
+    name='PK Plasma Store T12',
     aliquot_type=wb,
     processing_profile=plasma_processing)
 lab_profile.add_panel(pk_plasma_panel_t12)
 
 pk_plasma_panel_t23 = RequisitionPanel(
-    name='Pk Plasma Store T23',
+    name='PK Plasma Store T23',
     aliquot_type=wb,
     processing_profile=plasma_processing)
 lab_profile.add_panel(pk_plasma_panel_t23)
