@@ -26,7 +26,9 @@ normal_data = {
     'potassium': [
         p('3.6<=x<=5.2', units=MILLIMOLES_PER_LITER, gender=[MALE, FEMALE], **age_opts)],
     'magnesium': [
-        p('0.75<=x<=1.2', units=MILLIMOLES_PER_LITER, gender=[MALE, FEMALE], **age_opts)],
+        p('0.75<=x<=1.2', units=MILLIMOLES_PER_LITER,
+          gender=[MALE, FEMALE], **age_opts),
+        p('1.8<=x<=2.9', units=MILLIGRAMS_PER_DECILITER, gender=[MALE, FEMALE], **age_opts)],
     'alt': [
         p('10<=x<=40', units=IU_LITER, gender=[MALE, FEMALE], **age_opts)],
     'creatinine': [
@@ -82,6 +84,10 @@ grading_data = {
         p('0.3<=x<=0.44', grade=GRADE3, units=MILLIMOLES_PER_LITER,
           gender=[MALE, FEMALE], **age_opts),
         p('x<0.3', grade=GRADE4, units=MILLIMOLES_PER_LITER,
+          gender=[MALE, FEMALE], **age_opts),
+        p('0.7<=x<=1.1', grade=GRADE3, units=MILLIGRAMS_PER_DECILITER,
+          gender=[MALE, FEMALE], **age_opts),
+        p('x<0.7', grade=GRADE4, units=MILLIGRAMS_PER_DECILITER,
           gender=[MALE, FEMALE], **age_opts),
     ],
     'alt': [
