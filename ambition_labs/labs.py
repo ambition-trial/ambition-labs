@@ -120,7 +120,7 @@ wb_panel = RequisitionPanel(
     processing_profile=whole_blood_processing)
 lab_profile.add_panel(wb_panel)
 
-csf_pkpd_panel = RequisitionPanel(
+csf_pkpd_panel = RequisitionPanel(  # TODO: Only for Blantyre
     name='CSF PK/PD',
     aliquot_type=csf,
     processing_profile=csf_pkpd_processing_profile)
@@ -138,14 +138,14 @@ csf_panel = RequisitionPanel(
     processing_profile=csf_store_processing_profile)
 lab_profile.add_panel(csf_panel)
 
-csf_stop_panel = RequisitionPanel(
+csf_stop_panel = RequisitionPanel(  # TODO: Blantyre only.
     name='CSF STOP-CM',
     aliquot_type=csf,
     processing_profile=csf_stop_processing_profile)
 lab_profile.add_panel(csf_stop_panel)
 
 csf_chemistry_panel = RequisitionPanel(
-    name='CSF Chemistry',
+    name='CSF Chem & Haem Routine',
     aliquot_type=csf,
     processing_profile=csf_chem_processing_profile)
 lab_profile.add_panel(csf_chemistry_panel)
@@ -198,7 +198,7 @@ qpcr_blood_panel = RequisitionPanel(
     processing_profile=qpcr_blood_processing)
 lab_profile.add_panel(qpcr_blood_panel)
 
-pk_plasma_panel_t2 = RequisitionPanel(
+pk_plasma_panel_t2 = RequisitionPanel(  # TODO: For Blantyre only
     name='PK Plasma Store T2',
     aliquot_type=wb,
     processing_profile=plasma_processing)
