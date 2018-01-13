@@ -97,7 +97,7 @@ serum_process = Process(aliquot_type=serum, aliquot_count=2)
 serum_processing.add_processes(serum_process)
 
 plasma_buffycoat_processing = ProcessingProfile(
-    name='Plasma & BC', aliquot_type=wb)
+    name='Plasma and BC', aliquot_type=wb)
 plasma_process = Process(aliquot_type=pl, aliquot_count=2)
 buffycoat_process = Process(aliquot_type=bc, aliquot_count=1)
 plasma_buffycoat_processing.add_processes(plasma_process, buffycoat_process)
@@ -133,7 +133,7 @@ qpcr_csf_panel = RequisitionPanel(
 lab_profile.add_panel(qpcr_csf_panel)
 
 csf_panel = RequisitionPanel(
-    name='CSF Test & Store',
+    name='CSF Test and Store',
     aliquot_type=csf,
     processing_profile=csf_store_processing_profile)
 lab_profile.add_panel(csf_panel)
@@ -145,7 +145,7 @@ csf_stop_panel = RequisitionPanel(  # TODO: Blantyre only.
 lab_profile.add_panel(csf_stop_panel)
 
 csf_chemistry_panel = RequisitionPanel(
-    name='CSF Chem & Haem Routine',
+    name='CSF Chem and Haem Routine',
     aliquot_type=csf,
     processing_profile=csf_chem_processing_profile)
 lab_profile.add_panel(csf_chemistry_panel)
@@ -187,7 +187,7 @@ serum_panel = RequisitionPanel(
 lab_profile.add_panel(serum_panel)
 
 plasma_buffycoat_panel = RequisitionPanel(
-    name='Plasma & Buffycoat Store',
+    name='Plasma and Buffycoat Store',
     aliquot_type=wb,
     processing_profile=plasma_buffycoat_processing)
 lab_profile.add_panel(plasma_buffycoat_panel)
