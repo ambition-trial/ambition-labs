@@ -1,7 +1,8 @@
 from django.test import TestCase
 from edc_lab.site_labs import site_labs
+from edc_lab.models import Panel
 
-from ..labs import lab_profile
+from ..lab_profiles import lab_profile
 
 
 class TestLabs(TestCase):
@@ -9,20 +10,21 @@ class TestLabs(TestCase):
     def setUp(self):
         site_labs._registry = {}
         site_labs.loaded = False
-        site_labs.register(
-            lab_profile=lab_profile,
-            requisition_model='ambition_subject.subjectrequisition')
+        site_labs.register(lab_profile=lab_profile)
 
     def test_(self):
-        obj = site_labs.get(lab_profile_name='ambition_subject')
+        obj = site_labs.get(lab_profile_name='ambition_lab_profile')
         self.assertEqual(obj, lab_profile)
 
     def test_lab_profile_model(self):
-        obj = site_labs.get(lab_profile_name='ambition_subject')
+        obj = site_labs.get(lab_profile_name='ambition_lab_profile')
         self.assertEqual('ambition_subject.subjectrequisition',
                          obj.requisition_model)
 
     def test_panel_model(self):
-        for panel in site_labs.get(lab_profile_name='ambition_subject').panels.values():
+        for panel in site_labs.get(lab_profile_name='ambition_lab_profile').panels.values():
             self.assertEqual(
-                panel.model, 'ambition_subject.subjectrequisition')
+                panel.requisition_model, 'ambition_subject.subjectrequisition')
+
+    def test_panels_exist(self):
+        self.assertGreater(Panel.objects.all().count(), 0)
