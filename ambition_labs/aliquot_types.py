@@ -1,18 +1,7 @@
-from edc_lab import AliquotType
-
-pl = AliquotType(name='Plasma', alpha_code='PL', numeric_code='36')
-
-bc = AliquotType(name='Buffy Coat', alpha_code='BC', numeric_code='12')
-
-serum = AliquotType(name='Serum', alpha_code='SERUM', numeric_code='06')
+from edc_lab import AliquotType, pl, bc, serum, wb
 
 fbc = AliquotType(name='FBC', alpha_code='FBC', numeric_code='63')
 
-# # TODO: Get correct sample codes from LIS
-# chemistry = AliquotType('Chemistry', 'CHEM' '59')
-# lab_profile.add_aliquot_type(chemistry)
-
-wb = AliquotType(name='Whole Blood', alpha_code='WB', numeric_code='02')
 wb.add_derivatives(bc, pl, serum, fbc, wb)
 
 qfc = AliquotType(

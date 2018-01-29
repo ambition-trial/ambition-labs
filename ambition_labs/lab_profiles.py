@@ -18,7 +18,7 @@ lab_profile.add_panel(csf_pkpd_panel)
 lab_profile.add_panel(qpcr_csf_panel)
 lab_profile.add_panel(csf_panel)
 lab_profile.add_panel(csf_stop_panel)
-lab_profile.add_panel(csf_chemistry_panel)
+lab_profile.add_panel(csf_chemistry_panel)  # goes to PMH
 lab_profile.add_panel(cd4_panel)
 lab_profile.add_panel(viral_load_panel)
 lab_profile.add_panel(fbc_panel)
