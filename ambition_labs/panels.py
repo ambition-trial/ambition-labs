@@ -89,7 +89,13 @@ plasma_buffycoat_panel = RequisitionPanel(
 
 qpcr_blood_panel = RequisitionPanel(
     name='qpcr',
-    verbose_name='qPCR Blood',
+    verbose_name='qPCR Blood (0hr)',
+    aliquot_type=wb,
+    processing_profile=qpcr_blood_processing)
+
+qpcr23_blood_panel = RequisitionPanel(
+    name='qpcr23',
+    verbose_name='qPCR Blood (23hr)',
     aliquot_type=wb,
     processing_profile=qpcr_blood_processing)
 
