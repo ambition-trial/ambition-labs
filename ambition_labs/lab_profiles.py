@@ -2,7 +2,7 @@ from edc_lab import LabProfile
 
 from .panels import (
     wb_panel, csf_pkpd_panel, qpcr_csf_panel, csf_panel,
-    csf_stop_panel, csf_chemistry_panel,
+    csf_stop_panel, csf_chemistry_panel, qpcr23_blood_panel,
     cd4_panel, viral_load_panel, fbc_panel, chemistry_panel,
     chemistry_alt_panel, serum_panel, plasma_buffycoat_panel,
     qpcr_blood_panel, pk_plasma_panel_t2, pk_plasma_panel_t4,
@@ -27,6 +27,7 @@ lab_profile.add_panel(chemistry_alt_panel)
 lab_profile.add_panel(serum_panel)
 lab_profile.add_panel(plasma_buffycoat_panel)
 lab_profile.add_panel(qpcr_blood_panel)
+lab_profile.add_panel(qpcr23_blood_panel)
 lab_profile.add_panel(pk_plasma_panel_t2)  # TODO: For Blantyre only
 lab_profile.add_panel(pk_plasma_panel_t4)
 lab_profile.add_panel(pk_plasma_panel_t7)
