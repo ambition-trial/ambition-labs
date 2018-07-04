@@ -1,3 +1,4 @@
+from ambition_sites.get_site_id import get_site_id
 from edc_lab import RequisitionPanel
 
 from .processing_profiles import (
@@ -7,7 +8,6 @@ from .processing_profiles import (
     cd4_processing, viral_load_processing, fbc_processing,
     chemistry_processing, chemistry_alt_processing, serum_processing,
     plasma_buffycoat_processing, qpcr_blood_processing, plasma_processing)
-from ambition_sites.get_site_id import get_site_id
 
 wb_panel = RequisitionPanel(
     name='wb_storage',
