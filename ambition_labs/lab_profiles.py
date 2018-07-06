@@ -7,7 +7,6 @@ from .panels import (
     chemistry_alt_panel, serum_panel, plasma_buffycoat_panel,
     qpcr_blood_panel, pk_plasma_panel_t2, pk_plasma_panel_t4,
     pk_plasma_panel_t7, pk_plasma_panel_t12, pk_plasma_panel_t23)
-from ambition_sites.get_site_id import get_site_id
 
 subject_lab_profile = LabProfile(
     name='subject',
@@ -28,8 +27,7 @@ subject_lab_profile.add_panel(serum_panel)
 subject_lab_profile.add_panel(plasma_buffycoat_panel)
 subject_lab_profile.add_panel(qpcr_blood_panel)
 subject_lab_profile.add_panel(qpcr24_blood_panel)
-subject_lab_profile.add_panel(
-    pk_plasma_panel_t2, site_id=get_site_id('blantyre'))
+subject_lab_profile.add_panel(pk_plasma_panel_t2)
 subject_lab_profile.add_panel(pk_plasma_panel_t4)
 subject_lab_profile.add_panel(pk_plasma_panel_t7)
 subject_lab_profile.add_panel(pk_plasma_panel_t12)

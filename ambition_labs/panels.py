@@ -1,4 +1,3 @@
-from ambition_sites.get_site_id import get_site_id
 from edc_lab import RequisitionPanel
 
 from .processing_profiles import (
@@ -17,8 +16,7 @@ wb_panel = RequisitionPanel(
 csf_pkpd_panel = RequisitionPanel(  # TODO: Only for Blantyre
     name='csf_pk_pd',
     verbose_name='CSF PK/PD',
-    processing_profile=csf_pkpd_processing_profile,
-    site_ids=[get_site_id('blantyre')])
+    processing_profile=csf_pkpd_processing_profile)
 
 qpcr_csf_panel = RequisitionPanel(
     name='qpcr_csf',
@@ -33,8 +31,7 @@ csf_panel = RequisitionPanel(
 csf_stop_panel = RequisitionPanel(  # TODO: Blantyre only.
     name='csf_stop_cm',
     verbose_name='CSF STOP-CM',
-    processing_profile=csf_stop_processing_profile,
-    site_ids=[get_site_id('blantyre')])
+    processing_profile=csf_stop_processing_profile)
 
 csf_chemistry_panel = RequisitionPanel(
     name='csf_chem_haem_routine',
@@ -89,8 +86,7 @@ qpcr24_blood_panel = RequisitionPanel(
 pk_plasma_panel_t2 = RequisitionPanel(  # TODO: For Blantyre only
     name='pk_pl_store_t2',
     verbose_name='PK Plasma Store T2',
-    processing_profile=plasma_processing,
-    site_ids=[get_site_id('blantyre')])
+    processing_profile=plasma_processing)
 
 pk_plasma_panel_t4 = RequisitionPanel(
     name='pk_pl_store_t4',
