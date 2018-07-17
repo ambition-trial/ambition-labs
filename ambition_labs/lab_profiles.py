@@ -9,7 +9,7 @@ from .panels import (
     pk_plasma_panel_t7, pk_plasma_panel_t12, pk_plasma_panel_t23)
 
 subject_lab_profile = LabProfile(
-    name='subject',
+    name='subject_lab_profile',
     requisition_model='ambition_subject.subjectrequisition')
 
 subject_lab_profile.add_panel(wb_panel)
