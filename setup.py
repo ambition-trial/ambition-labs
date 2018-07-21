@@ -21,7 +21,7 @@ setup(
     include_package_data=True,
     url='https://github.com/ambition-trial/ambition-labs',
     license='GPL license, see LICENSE',
-    description='ambition lab modules',
+    description='Lab configuration for ambition/edc',
     long_description=README,
     zip_safe=False,
     keywords='django ambition lab',
