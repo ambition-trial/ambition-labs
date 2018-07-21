@@ -1,7 +1,7 @@
 from edc_constants.constants import FEMALE, MALE
-
 from edc_reportable import site_reportables, parse as p
-from edc_reportable import MILLIGRAMS_PER_DECILITER, MILLIMOLES_PER_LITER, MICROMOLES_PER_LITER, IU_LITER
+from edc_reportable import MILLIGRAMS_PER_DECILITER, MILLIMOLES_PER_LITER
+from edc_reportable import MICROMOLES_PER_LITER, IU_LITER
 from edc_reportable import GRAMS_PER_DECILITER, TEN_X_9_PER_LITER, GRADE3, GRADE4
 
 
