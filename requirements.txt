@@ -1,15 +1,2 @@
-git+https://github.com/ambition-trial/ambition-sites.git@develop#egg=ambition-sites
-git+https://github.com/clinicedc/edc-base.git@develop#egg=edc_base
-git+https://github.com/clinicedc/edc-lab.git@develop#egg=edc_lab
-git+https://github.com/clinicedc/edc-reportable.git@develop#egg=edc_reportable
-git+https://github.com/clinicedc/edc-identifier.git@develop#egg=edc_identifier
-git+https://github.com/clinicedc/edc-constants.git@develop#egg=edc_constants
-git+https://github.com/clinicedc/edc-label.git@develop#egg=edc_label
-git+https://github.com/clinicedc/edc-protocol.git@develop#egg=edc_protocol
-git+https://github.com/clinicedc/edc-device.git@develop#egg=edc_device
-git+https://github.com/clinicedc/edc-search.git@develop#egg=edc_search
-git+https://github.com/clinicedc/edc-fieldsets.git@develop#egg=edc_fieldsets
-git+https://github.com/clinicedc/edc-model-admin.git@develop#egg=edc_model_admin
-git+https://github.com/clinicedc/edc-form-validators.git@develop#egg=edc_form_validators
-git+https://github.com/erikvw/django-revision.git@develop#egg=django_revision
-git+https://github.com/clinicedc/edc-model-fields@develop#egg=edc-model-fields
+faker
+model-mommy
