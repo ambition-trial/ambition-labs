@@ -25,6 +25,10 @@ setup(
     long_description=README,
     zip_safe=False,
     keywords='django ambition lab',
+    install_requires=[
+        'edc-base',
+        'edc-lab',
+        'edc_reportable'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
