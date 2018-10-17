@@ -83,6 +83,11 @@ qpcr24_blood_panel = RequisitionPanel(
     verbose_name='qPCR Blood (24hr)',
     processing_profile=qpcr_blood_processing)
 
+pk_plasma_panel_t0 = RequisitionPanel(  # TODO: For Blantyre only
+    name='pk_pl_store_t0',
+    verbose_name='PK Plasma Store T0',
+    processing_profile=plasma_processing)
+
 pk_plasma_panel_t2 = RequisitionPanel(  # TODO: For Blantyre only
     name='pk_pl_store_t2',
     verbose_name='PK Plasma Store T2',
