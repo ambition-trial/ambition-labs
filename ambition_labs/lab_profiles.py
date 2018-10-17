@@ -6,7 +6,8 @@ from .panels import (
     cd4_panel, viral_load_panel, fbc_panel, chemistry_panel,
     chemistry_alt_panel, serum_panel, plasma_buffycoat_panel,
     qpcr_blood_panel, pk_plasma_panel_t2, pk_plasma_panel_t4,
-    pk_plasma_panel_t7, pk_plasma_panel_t12, pk_plasma_panel_t23)
+    pk_plasma_panel_t7, pk_plasma_panel_t12, pk_plasma_panel_t23,
+    pk_plasma_panel_t0)
 
 subject_lab_profile = LabProfile(
     name='subject_lab_profile',
@@ -27,6 +28,7 @@ subject_lab_profile.add_panel(serum_panel)
 subject_lab_profile.add_panel(plasma_buffycoat_panel)
 subject_lab_profile.add_panel(qpcr_blood_panel)
 subject_lab_profile.add_panel(qpcr24_blood_panel)
+subject_lab_profile.add_panel(pk_plasma_panel_t0)
 subject_lab_profile.add_panel(pk_plasma_panel_t2)
 subject_lab_profile.add_panel(pk_plasma_panel_t4)
 subject_lab_profile.add_panel(pk_plasma_panel_t7)
