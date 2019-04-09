@@ -26,7 +26,6 @@ setup(
     zip_safe=False,
     keywords='django ambition lab',
     install_requires=[
-        'edc-base',
         'edc-lab',
         'edc_reportable'],
     classifiers=[
