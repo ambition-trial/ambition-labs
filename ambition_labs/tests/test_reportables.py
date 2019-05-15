@@ -8,9 +8,8 @@ class TestReportables(TestCase):
         try:
             from .. import reportables
         except ParserError:
-            self.fail('ParserError unexpectedly raised.')
-        self.assertIsNotNone(site_reportables.get('ambition'))
-        filename1, filename2 = site_reportables.to_csv(
-            'ambition', path=mkdtemp())
+            self.fail("ParserError unexpectedly raised.")
+        self.assertIsNotNone(site_reportables.get("ambition"))
+        filename1, filename2 = site_reportables.to_csv("ambition", path=mkdtemp())
         print(filename1)
         print(filename2)
