@@ -6,7 +6,7 @@ from tempfile import mkdtemp
 class TestReportables(TestCase):
     def test(self):
         try:
-            from .. import reportables
+            from ambition_labs import reportables
         except ParserError:
             self.fail("ParserError unexpectedly raised.")
         self.assertIsNotNone(site_reportables.get("ambition"))
