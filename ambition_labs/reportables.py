@@ -15,26 +15,20 @@ age_opts = dict(
 
 normal_data = {
     "haemoglobin": [
-        p("13.5<=x<=17.5", units=GRAMS_PER_DECILITER,
-          gender=[MALE], **age_opts),
-        p("12.0<=x<=15.5", units=GRAMS_PER_DECILITER,
-          gender=[FEMALE], **age_opts),
+        p("13.5<=x<=17.5", units=GRAMS_PER_DECILITER, gender=[MALE], **age_opts),
+        p("12.0<=x<=15.5", units=GRAMS_PER_DECILITER, gender=[FEMALE], **age_opts),
     ],
     "platelets": [
-        p("150<=x<=450", units=TEN_X_9_PER_LITER,
-          gender=[MALE, FEMALE], **age_opts)
+        p("150<=x<=450", units=TEN_X_9_PER_LITER, gender=[MALE, FEMALE], **age_opts)
     ],
     "neutrophil": [
-        p("2.5<=x<=7.5", units=TEN_X_9_PER_LITER,
-          gender=[MALE, FEMALE], **age_opts)
+        p("2.5<=x<=7.5", units=TEN_X_9_PER_LITER, gender=[MALE, FEMALE], **age_opts)
     ],
     "sodium": [
-        p("135<=x<=145", units=MILLIMOLES_PER_LITER,
-          gender=[MALE, FEMALE], **age_opts)
+        p("135<=x<=145", units=MILLIMOLES_PER_LITER, gender=[MALE, FEMALE], **age_opts)
     ],
     "potassium": [
-        p("3.6<=x<=5.2", units=MILLIMOLES_PER_LITER,
-          gender=[MALE, FEMALE], **age_opts)
+        p("3.6<=x<=5.2", units=MILLIMOLES_PER_LITER, gender=[MALE, FEMALE], **age_opts)
     ],
     "magnesium": [
         p(
@@ -58,8 +52,7 @@ normal_data = {
             gender=[MALE, FEMALE],
             **age_opts,
         ),
-        p("53<=x<=115", units=MICROMOLES_PER_LITER,
-          gender=[MALE, FEMALE], **age_opts),
+        p("53<=x<=115", units=MICROMOLES_PER_LITER, gender=[MALE, FEMALE], **age_opts),
     ],
     "wbc": [p("2.49<x", units=TEN_X_9_PER_LITER, gender=[MALE, FEMALE], **age_opts)],
 }
@@ -80,8 +73,7 @@ grading_data = {
             gender=[FEMALE],
             **age_opts,
         ),
-        p("x<7.0", grade=GRADE4, units=GRAMS_PER_DECILITER,
-          gender=[MALE], **age_opts),
+        p("x<7.0", grade=GRADE4, units=GRAMS_PER_DECILITER, gender=[MALE], **age_opts),
         p(
             "x<6.5",
             grade=GRADE4,
@@ -220,8 +212,7 @@ grading_data = {
             gender=[MALE, FEMALE],
             **age_opts,
         ),
-        p("400<x", grade=GRADE4, units=IU_LITER,
-          gender=[MALE, FEMALE], **age_opts),
+        p("400<x", grade=GRADE4, units=IU_LITER, gender=[MALE, FEMALE], **age_opts),
     ],
     "creatinine": [
         p(
