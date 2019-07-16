@@ -35,13 +35,13 @@ normal_data = {
             "0.75<=x<=1.2",
             units=MILLIMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "1.8<=x<=2.9",
             units=MILLIGRAMS_PER_DECILITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
     ],
     "alt": [p("10<=x<=40", units=IU_LITER, gender=[MALE, FEMALE], **age_opts)],
@@ -50,10 +50,11 @@ normal_data = {
             "0.6<=x<=1.3",
             units=MILLIGRAMS_PER_DECILITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p("53<=x<=115", units=MICROMOLES_PER_LITER, gender=[MALE, FEMALE], **age_opts),
     ],
+    "wbc": [p("2.49<x", units=TEN_X_9_PER_LITER, gender=[MALE, FEMALE], **age_opts)],
 }
 
 grading_data = {
@@ -63,14 +64,14 @@ grading_data = {
             grade=GRADE3,
             units=GRAMS_PER_DECILITER,
             gender=[MALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "6.5<=x<8.5",
             grade=GRADE3,
             units=GRAMS_PER_DECILITER,
             gender=[FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p("x<7.0", grade=GRADE4, units=GRAMS_PER_DECILITER, gender=[MALE], **age_opts),
         p(
@@ -78,7 +79,7 @@ grading_data = {
             grade=GRADE4,
             units=GRAMS_PER_DECILITER,
             gender=[FEMALE],
-            **age_opts
+            **age_opts,
         ),
     ],
     "platelets": [
@@ -87,14 +88,14 @@ grading_data = {
             grade=GRADE3,
             units=TEN_X_9_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "x<25",
             grade=GRADE4,
             units=TEN_X_9_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
     ],
     "neutrophil": [
@@ -103,14 +104,14 @@ grading_data = {
             grade=GRADE3,
             units=TEN_X_9_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "x<0.4",
             grade=GRADE4,
             units=TEN_X_9_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
     ],
     "sodium": [
@@ -119,28 +120,28 @@ grading_data = {
             grade=GRADE3,
             units=MILLIMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "154<=x<=159",
             grade=GRADE3,
             units=MILLIMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "160<=x",
             grade=GRADE4,
             units=MILLIMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "x<=120",
             grade=GRADE4,
             units=MILLIMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
     ],
     "potassium": [
@@ -149,28 +150,28 @@ grading_data = {
             grade=GRADE3,
             units=MILLIMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "6.5<=x<=7.0",
             grade=GRADE3,
             units=MILLIMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "x<2.0",
             grade=GRADE4,
             units=MILLIMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "7.0<x",
             grade=GRADE4,
             units=MILLIMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
     ],
     "magnesium": [
@@ -179,28 +180,28 @@ grading_data = {
             grade=GRADE3,
             units=MILLIMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "x<0.3",
             grade=GRADE4,
             units=MILLIMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "0.7<=x<=1.1",
             grade=GRADE3,
             units=MILLIGRAMS_PER_DECILITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "x<0.7",
             grade=GRADE4,
             units=MILLIGRAMS_PER_DECILITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
     ],
     "alt": [
@@ -209,7 +210,7 @@ grading_data = {
             grade=GRADE3,
             units=IU_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p("400<x", grade=GRADE4, units=IU_LITER, gender=[MALE, FEMALE], **age_opts),
     ],
@@ -219,28 +220,44 @@ grading_data = {
             grade=GRADE3,
             units=MILLIGRAMS_PER_DECILITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "216<=x<=400",
             grade=GRADE3,
             units=MICROMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
-            "4.55<x",
+            "4.42<x",  # corrected 16JULY2019 from 4.55
             grade=GRADE4,
             units=MILLIGRAMS_PER_DECILITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
         ),
         p(
             "400<x",
             grade=GRADE4,
             units=MICROMOLES_PER_LITER,
             gender=[MALE, FEMALE],
-            **age_opts
+            **age_opts,
+        ),
+    ],
+    "wbc": [
+        p(
+            "1.00<=x<=1.49",
+            grade=GRADE3,
+            units=TEN_X_9_PER_LITER,
+            gender=[MALE, FEMALE],
+            **age_opts,
+        ),
+        p(
+            "x<1.00",
+            grade=GRADE4,
+            units=TEN_X_9_PER_LITER,
+            gender=[MALE, FEMALE],
+            **age_opts,
         ),
     ],
 }
