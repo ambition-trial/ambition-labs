@@ -1,21 +1,23 @@
 from edc_lab import RequisitionPanel
 
 from .processing_profiles import (
-    whole_blood_processing,
-    csf_pkpd_processing_profile,
-    qpcr_csf_processing_profile,
-    csf_store_processing_profile,
-    csf_stop_processing_profile,
-    csf_chem_processing_profile,
     cd4_processing,
-    viral_load_processing,
-    fbc_processing,
-    chemistry_processing,
     chemistry_alt_processing,
-    serum_processing,
+    chemistry_processing,
+    csf_chem_processing_profile,
+    csf_paxgene_processing_profile,
+    csf_pkpd_processing_profile,
+    csf_stop_processing_profile,
+    csf_store_processing_profile,
+    fbc_processing,
     plasma_buffycoat_processing,
-    qpcr_blood_processing,
     plasma_processing,
+    qpcr_blood_processing,
+    qpcr_csf_processing_profile,
+    serum_processing,
+    viral_load_processing,
+    wb_paxgene_processing_profile,
+    whole_blood_processing,
 )
 
 wb_panel = RequisitionPanel(
@@ -136,4 +138,16 @@ pk_plasma_panel_t23 = RequisitionPanel(
     name="pk_pl_store_t23",
     verbose_name="PK Plasma Store T23",
     processing_profile=plasma_processing,
+)
+
+wb_paxgene_panel = RequisitionPanel(
+    name="wb_paxgene",
+    verbose_name="Blood PaxGene",
+    processing_profile=wb_paxgene_processing_profile,
+)
+
+csf_paxgene_panel = RequisitionPanel(
+    name="csf_paxgene",
+    verbose_name="CSF PaxGene",
+    processing_profile=csf_paxgene_processing_profile,
 )
