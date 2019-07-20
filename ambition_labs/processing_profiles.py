@@ -4,6 +4,9 @@ from .aliquot_types import csf, qfc, csf_testing, csf_supernatant, csf_pellet
 from .aliquot_types import csf_glucose, csf_protein, wb, pl, bc, serum
 
 
+wb_paxgene_processing_profile = ProcessingProfile(name="wb_paxgene", aliquot_type=wb)
+csf_paxgene_processing_profile = ProcessingProfile(name="wb_paxgene", aliquot_type=csf)
+
 csf_store_processing_profile = ProcessingProfile(name="csf_culture", aliquot_type=csf)
 process_qfc = Process(aliquot_type=qfc, aliquot_count=3)
 process_csf_testing = Process(aliquot_type=csf_testing, aliquot_count=2)
