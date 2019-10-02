@@ -3,6 +3,7 @@ from edc_reportable import site_reportables, parse as p
 from edc_reportable import MILLIGRAMS_PER_DECILITER, MILLIMOLES_PER_LITER
 from edc_reportable import MICROMOLES_PER_LITER, IU_LITER
 from edc_reportable import GRAMS_PER_DECILITER, TEN_X_9_PER_LITER, GRADE3, GRADE4
+from edc_reportable.units import CELLS_PER_MICROLITER, CELLS_PER_MILLIMETER_CUBED
 
 
 age_opts = dict(
@@ -256,6 +257,20 @@ grading_data = {
             "x<1.00",
             grade=GRADE4,
             units=TEN_X_9_PER_LITER,
+            gender=[MALE, FEMALE],
+            **age_opts,
+        ),
+        p(
+            "1000<=x<=1490",
+            grade=GRADE3,
+            units=CELLS_PER_MILLIMETER_CUBED,
+            gender=[MALE, FEMALE],
+            **age_opts,
+        ),
+        p(
+            "x<1000",
+            grade=GRADE4,
+            units=CELLS_PER_MILLIMETER_CUBED,
             gender=[MALE, FEMALE],
             **age_opts,
         ),

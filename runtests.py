@@ -36,6 +36,7 @@ DEFAULT_SETTINGS = DefaultTestSettings(
         'edc_protocol.apps.AppConfig',
         'edc_device.apps.AppConfig',
         'edc_identifier.apps.AppConfig',
+        "edc_sites.apps.AppConfig",
         'ambition_labs.apps.AppConfig',
     ],
     add_dashboard_middleware=True,
