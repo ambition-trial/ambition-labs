@@ -22,8 +22,9 @@ DEFAULT_SETTINGS = DefaultTestSettings(
     ADVERSE_EVENT_ADMIN_SITE="ambition_ae_admin",
     ADVERSE_EVENT_APP_LABEL="ambition_ae",
     EDC_BOOTSTRAP=3,
-    RANDOMIZATION_LIST_PATH=join(
-        base_dir, app_name, "tests", "test_randomization_list.csv"),
+    EDC_RANDOMIZATION_LIST_MODEL="ambition_rando.randomizationlist",
+    EDC_RANDOMIZATION_LIST_FILE=join(
+        base_dir, app_name, "tests", "etc", "randomization_list.csv"),
     INSTALLED_APPS=[
         'django.contrib.admin',
         'django.contrib.auth',
