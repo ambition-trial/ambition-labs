@@ -15,6 +15,8 @@ from .processing_profiles import (
     qpcr_blood_processing,
     qpcr_csf_processing_profile,
     serum_processing,
+    suptum_processing_profile,
+    urine_processing_profile,
     viral_load_processing,
     wb_paxgene_processing_profile,
     whole_blood_processing,
@@ -150,4 +152,18 @@ csf_paxgene_panel = RequisitionPanel(
     name="csf_paxgene",
     verbose_name="CSF PaxGene",
     processing_profile=csf_paxgene_processing_profile,
+)
+
+sputum_panel = RequisitionPanel(
+    name="sputum", verbose_name="Sputum", processing_profile=suptum_processing_profile,
+)
+
+sputum_storage_panel = RequisitionPanel(
+    name="sputum_storage",
+    verbose_name="Sputum Storage",
+    processing_profile=suptum_processing_profile,
+)
+
+urine_panel = RequisitionPanel(
+    name="urine", verbose_name="Urine", processing_profile=urine_processing_profile,
 )

@@ -1,8 +1,12 @@
-from edc_lab import Process, ProcessingProfile
+from edc_lab import Process, ProcessingProfile, sputum, wb, pl, bc, serum, urine
 
 from .aliquot_types import csf, qfc, csf_testing, csf_supernatant, csf_pellet
-from .aliquot_types import csf_glucose, csf_protein, wb, pl, bc, serum
+from .aliquot_types import csf_glucose, csf_protein
 
+
+suptum_processing_profile = ProcessingProfile(name="sputum", aliquot_type=sputum)
+
+urine_processing_profile = ProcessingProfile(name="urine", aliquot_type=urine)
 
 wb_paxgene_processing_profile = ProcessingProfile(name="wb_paxgene", aliquot_type=wb)
 csf_paxgene_processing_profile = ProcessingProfile(name="wb_paxgene", aliquot_type=csf)
