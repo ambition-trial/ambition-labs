@@ -154,16 +154,14 @@ csf_paxgene_panel = RequisitionPanel(
     processing_profile=csf_paxgene_processing_profile,
 )
 
-sputum_panel = RequisitionPanel(
-    name="sputum", verbose_name="Sputum", processing_profile=suptum_processing_profile,
-)
-
 sputum_storage_panel = RequisitionPanel(
     name="sputum_storage",
     verbose_name="Sputum Storage",
     processing_profile=suptum_processing_profile,
 )
 
-urine_panel = RequisitionPanel(
-    name="urine", verbose_name="Urine", processing_profile=urine_processing_profile,
+urine_storage_panel = RequisitionPanel(
+    name="urine_storage",
+    verbose_name="Urine Storage",
+    processing_profile=urine_processing_profile,
 )

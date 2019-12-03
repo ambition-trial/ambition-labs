@@ -20,10 +20,9 @@ from .panels import (
     qpcr24_blood_panel,
     qpcr_blood_panel,
     qpcr_csf_panel,
-    sputum_panel,
-    sputum_storage_panel,
-    urine_panel,
     serum_panel,
+    sputum_storage_panel,
+    urine_storage_panel,
     viral_load_panel,
     wb_panel,
     wb_paxgene_panel,
@@ -56,6 +55,5 @@ subject_lab_profile.add_panel(pk_plasma_panel_t12)
 subject_lab_profile.add_panel(pk_plasma_panel_t23)
 subject_lab_profile.add_panel(wb_paxgene_panel)
 subject_lab_profile.add_panel(csf_paxgene_panel)
-subject_lab_profile.add_panel(sputum_panel)
 subject_lab_profile.add_panel(sputum_storage_panel)
-subject_lab_profile.add_panel(urine_panel)
+subject_lab_profile.add_panel(urine_storage_panel)

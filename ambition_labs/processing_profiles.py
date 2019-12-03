@@ -5,8 +5,12 @@ from .aliquot_types import csf_glucose, csf_protein
 
 
 suptum_processing_profile = ProcessingProfile(name="sputum", aliquot_type=sputum)
+suptum_store = Process(aliquot_type=sputum, aliquot_count=1)
+suptum_processing_profile.add_processes(suptum_store)
 
 urine_processing_profile = ProcessingProfile(name="urine", aliquot_type=urine)
+urine_store = Process(aliquot_type=urine, aliquot_count=1)
+urine_processing_profile.add_processes(urine_store)
 
 wb_paxgene_processing_profile = ProcessingProfile(name="wb_paxgene", aliquot_type=wb)
 csf_paxgene_processing_profile = ProcessingProfile(name="wb_paxgene", aliquot_type=csf)
