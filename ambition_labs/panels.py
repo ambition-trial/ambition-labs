@@ -156,12 +156,12 @@ csf_paxgene_panel = RequisitionPanel(
 
 sputum_storage_panel = RequisitionPanel(
     name="sputum_storage",
-    verbose_name="Sputum Storage",
+    verbose_name="qPCR Sputum Storage",
     processing_profile=suptum_processing_profile,
 )
 
 urine_storage_panel = RequisitionPanel(
     name="urine_storage",
-    verbose_name="Urine Storage",
+    verbose_name="qPCR Urine Storage",
     processing_profile=urine_processing_profile,
 )
